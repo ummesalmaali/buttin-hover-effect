@@ -1,0 +1,26 @@
+.buy_now{
+   transition:transform 0.45s cubic bezier(.785, .135, .15, .86);
+    overflow:hidden;
+    position:relative;
+   
+  }
+  .buy_now::before{
+    content:'';
+    transition:transform 0.45s cubic bezier(.785, .135, .15, .86);
+    background: #007fee;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    z-index:-1;
+    overflow:hidden;
+      transform-origin:left center;
+      transform: scale(1,1);
+  }
+    .buy_now:hover ::before{
+      width:100%;
+      transform-origin:right center;
+      transform: scale(0,1);
+      
+    }
